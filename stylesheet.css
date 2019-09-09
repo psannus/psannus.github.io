@@ -15,3 +15,7 @@ body {
    color: white;
    font-family: "Roboto", sans-serif;
 }
+
+#qr{
+	margin: 1em 1em 1em 1em;
+}
