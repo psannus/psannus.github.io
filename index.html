@@ -1,21 +1,51 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
 
-    <title>Big page</title>
-    <meta name="description" content="Random stuff">
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Big page</title>
+  <meta name="description" content="Random stuff">
+  <meta name="author" content="psannus">
 
-    <link rel="stylesheet" href="stylesheet.css"/>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
-
 <body>
-<script src="script.js"></script>
-<h1>mc kupong</h1>
-<button onclick="getCoupon()">Generate</button>
-<input id="generated-code" disabled/>
-<br>
-<img id="qr" src=""/>
+  <script src="js/script.js"></script>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="section">
+    <div class="container">
+      <div class="u-full-width">
+        <h1>mc kupong</h1>
+        <button onclick="getCoupon()">Generate</button>
+        <input class="button" id="generated-code" disabled/>
+        <br>
+        <img id="qr" src=""/>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
