@@ -7,8 +7,12 @@
 	padding-top: 2rem;
 }
 
-#generate-button:disabled,
-#generate-button:hover {
+#generate-button:disabled {
+	color: #999;
+	border: 1px solid #bbb;
+}
+
+#generate-button:disabled:hover {
 	color: #999;
 	border: 1px solid #bbb;
 }
