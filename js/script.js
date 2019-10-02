@@ -14,7 +14,7 @@ function getCoupon() {
 }
 
 window.addEventListener("load", function() {
-    if (document.cookie === "safecookie=safevalue") {
+    if (document.cookie.includes("safecookie=safevalue")) {
         clientAllowed = true;
         document.getElementById("generate-button").disabled = false;
         getCoupon();
