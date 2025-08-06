@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peter DVD Intro</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background-color: black;
+    }
+
+    #logo {
+      position: absolute;
+      font-size: 48px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      background-color: #222;
+      box-shadow: 0 0 20px white;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="logo">Peter</div>
+
+  <script>
+    const logo = document.getElementById('logo');
+
+    let x = 100;
+    let y = 100;
+    let dx = 2;
+    let dy = 2;
+
+    const colors = ['#ff0080', '#00ffff', '#00ff00', '#ffcc00', '#ff6600', '#ffffff', '#ff0000', '#3399ff'];
+
+    function randomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function animate() {
+      const logoRect = logo.getBoundingClientRect();
+      const winWidth = window.innerWidth;
+      const winHeight = window.innerHeight;
+
+      x += dx;
+      y += dy;
+
+      // Bounce off left/right
+      if (x + logoRect.width >= winWidth || x <= 0) {
+        dx *= -1;
+        logo.style.color = randomColor();
+        logo.style.boxShadow = `0 0 20px ${logo.style.color}`;
+      }
+
+      // Bounce off top/bottom
+      if (y + logoRect.height >= winHeight || y <= 0) {
+        dy *= -1;
+        logo.style.color = randomColor();
+        logo.style.boxShadow = `0 0 20px ${logo.style.color}`;
+      }
+
+      logo.style.left = x + 'px';
+      logo.style.top = y + 'px';
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
